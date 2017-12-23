@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="keywords" content="генератор паролей, пароль, запомнить пароль, хранение паролей, password generator, password, remember password, password-storage">
+	<meta name="description" content="онлайн сервис для генерации и запоминания паролей, online service for generating and remembering passwords">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>psswrds - about</title>
+
+	<style type="text/css">
+		@font-face {
+			font-family: Pragmatica;
+			src: url("Pragmatica.ttf");
+		}
+
+		body,
+		button,
+		input {
+			font-family: Pragmatica;
+			font-size: 16px;
+			color: #000;
+		}
+
+		a {
+			font-weight: bold;
+			color: #1240AB;
+		}
+
+		.one-div {
+			margin: 0 auto;
+			padding: 5px;
+			width: 100%;
+			max-width: 800px;
+		}
+
+		.div--upper {
+			text-align: center;
+		}
+
+		.div--content {
+			text-align: justify;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="one-div div--upper">
+		<h1></h1>
+	</div>
+	<div class="one-div div--content">
+		<h2></h2>
+		<p></p>
+		<p></p>
+	</div>
+	<div class="one-div div--content">
+		<h2></h2>
+		<p></p>
+	</div>
+	<div class="one-div div--content">
+		<h2></h2>
+		<p></p>
+	</div>
+	<div class="one-div div--content">
+		<h2></h2>
+		<p>
+			<a href="https://habrahabr.ru/post/125989/"></a>
+		</p>
+		<p>
+			<a href="#">Github</a>
+		</p>
+		<p>
+			<a href="https://colorscheme.ru/#3L21Tw0w0w0w0"></a>
+		</p>
+	</div>
+
+	<script type="text/javascript">
+
+		function getLang() {
+
+			return navigator.language || navigator.browserLanguage || navigator.systemLanguage || navigator.userLanguage;
+
+		}
+
+		function writeText() {
+
+			var lang = setLangs(getLang());
+
+			var h1 = document.getElementsByTagName("h1")[0];
+			h1.innerHTML = lang[0];
+
+			var h2 = document.getElementsByTagName("h2");
+			h2[0].innerHTML = lang[1];
+			h2[1].innerHTML = lang[4];
+			h2[2].innerHTML = lang[6];
+			h2[3].innerHTML = lang[8];
+
+			var p = document.getElementsByTagName("p");
+			p[0].innerHTML = lang[2];
+			p[1].innerHTML = lang[3];
+			p[2].innerHTML = lang[5];
+			p[3].innerHTML = lang[7];
+
+			var a = document.getElementsByTagName("a");
+			a[1].innerHTML = lang[9];
+			a[3].innerHTML = lang[10];
+
+		}
+
+		function setLangs(lang) {
+
+			var langs = {
+
+				"ru": [
+
+					"PSSWRDS - генератор паролей",
+					"Зачем?",
+					"Многие люди используют один и тот же пароль для разных программ / сервисов. Это не очень хорошо с точки зрения безопасности: если у Вас украдут пароль от одного сервиса, злоумышленники автоматически получат доступ и к другим.",
+					"PSSWRDS позволяет решить эту проблему. Вы по прежнему запоминаете только один пароль (в данном случае секретную фразу), но для разных сервисов Вы будете использовать разные пароли, которые генерирует PSSWRDS.",
+					"Как это работает?",
+					"Вы вводите секретную фразу, название сервиса, логин (если требуется). Затем нажимаете на кнопку 'Генерировать' и генерируете :) Для данной комбинации фраза-сервис-логин сгенерированный пароль будет всегда одинаковый. Таким образом Вы можете с любого устройства и в любой момент времени получить тот же пароль для того же сервиса (конечно, зная секретную фразу). Также Вы можете сохранить файл <a href='index.html'>index.html</a> и спокойно использовать его локально без доступа к интеренету.",
+					"Что насчет безопасности?",
+					"PSSWRDS не запоминает, не хранит, не передает никаких введенных и / или сгенерированных Вами данных нукуда и никому. Желаете убедиться? - добро пожаловать в исходники, они очень простые. Вы можете изучить исходные коды сохранив файлы к себе на компьютер, открыв их прямо в брузере, либо на github.",
+					"Ссылки",
+					"Исходная идея",
+					"Цветовая схема"
+
+				]
+
+			}
+
+			if (lang == "ru") {
+
+				return langs.ru;
+
+			} else {
+
+				return langs.en;
+
+			}
+
+		}
+
+		window.onload = function () {
+
+			writeText();
+
+		};
+
+	</script>
+
+</body>
+
+</html>
